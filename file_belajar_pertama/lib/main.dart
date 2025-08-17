@@ -4,7 +4,16 @@ void main() {
   runApp(
     MaterialApp(
       home: Scaffold(
-        body: Container(
+        body: GradientContainer()
+      ),
+    ),
+  );
+}
+
+class GradientContainer extends StatelessWidget{
+  @override// harus sama parameternya ini maksud nya menimpa
+  Widget build(BuildContext context) {
+    return Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
               colors: [Color.fromARGB(255, 234, 208, 235), Colors.deepPurple],
@@ -18,8 +27,6 @@ void main() {
               style: TextStyle(color: Colors.white, fontSize: 24),
             ),
           ),
-        ),
-      ),
-    ),
-  );
+        );
+  }
 }
